@@ -12,34 +12,40 @@
     tools:context="com.example.raul.calculadora.MainActivity"
     android:background="@android:drawable/alert_dark_frame">
 
-    <TextView
-        android:text="0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/background_light"
-        android:textIsSelectable="false"
-        android:hapticFeedbackEnabled="true"
-        android:gravity="bottom|right"
-        android:textAllCaps="true"
-        android:textSize="56dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <TableLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:baselineAligned="false">
+            android:layout_weight="1">
+
+            <TextView
+                android:text="0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/background_light"
+                android:textIsSelectable="false"
+                android:hapticFeedbackEnabled="true"
+                android:textAllCaps="true"
+                android:textSize="56dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="bottom|right"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <Button
                 android:text="C"
@@ -55,7 +61,7 @@
             <Button
                 android:text="MC"
                 android:layout_width="0dp"
-                android:id="@+id/button22"
+                android:id="@+id/bMC"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
@@ -66,13 +72,59 @@
             <Button
                 android:text="MR"
                 android:layout_width="0dp"
-                android:id="@+id/button21"
+                android:id="@+id/bMR"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
                 android:textStyle="normal|bold|italic"
                 android:textSize="20sp"
                 android:onClick="pulsarMR" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/raiz_cuadrada"
+                android:id="@+id/imageButton"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:layout_weight="1">
+
+            <Button
+                android:text="Sen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bSen"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:background="@android:color/darker_gray" />
+
+            <Button
+                android:text="Cos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bCos"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:background="@android:color/darker_gray" />
+
+            <Button
+                android:text="Tang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bTan"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:background="@android:color/darker_gray" />
 
             <Button
                 android:text="/"
@@ -89,7 +141,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <Button
                 android:text="7"
@@ -138,7 +191,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <Button
                 android:text="4"
@@ -183,11 +237,13 @@
                 android:textStyle="normal|bold|italic"
                 android:textSize="20sp"
                 android:onClick="pulsarOperador" />
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <Button
                 android:text="1"
@@ -236,7 +292,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <ImageButton
                 android:background="@android:color/darker_gray"

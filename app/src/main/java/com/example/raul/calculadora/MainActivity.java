@@ -1,8 +1,10 @@
 package com.example.raul.calculadora;
 
 import android.media.MediaCodec;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     double d1, mc, m;
     Button b;
     ImageButton ib;
-    boolean opp, rest, ope, coma;
+    boolean opp, rest, ope;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -171,5 +173,31 @@ public class MainActivity extends AppCompatActivity {
         n = "";
         ope = false;
         opp = false;
+    }
+
+    public void onSaveInstanceState(Bundle savedInstanceState){
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("PANT", pantalla);
+        savedInstanceState.putString("N", n);
+        savedInstanceState.putString("OP", op);
+        savedInstanceState.putDouble("D1", d1);
+        savedInstanceState.putDouble("MC", mc);
+        savedInstanceState.putDouble("M", m);
+        savedInstanceState.getBoolean("OPP", opp);
+        savedInstanceState.getBoolean("OPE", ope);
+        savedInstanceState.putBoolean("REST", rest);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+        pantalla = savedInstanceState.getString("PANT");
+        n = savedInstanceState.getString("N");
+        op = savedInstanceState.getString("OP");
+        d1 = savedInstanceState.getDouble("D1");
+        mc = savedInstanceState.getDouble("MC");
+        m = savedInstanceState.getDouble("m");
+        opp = savedInstanceState.getBoolean("OPP");
+        ope = savedInstanceState.getBoolean("OPE");
+        rest = savedInstanceState.getBoolean("REST");
     }
 }

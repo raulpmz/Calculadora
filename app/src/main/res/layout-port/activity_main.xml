@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -14,7 +15,7 @@
     <TextView
         android:text="0"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:id="@+id/tv"
         android:textStyle="normal|bold"
         android:textColor="@android:color/background_light"
@@ -35,6 +36,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
+
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -52,24 +55,26 @@
                 android:onClick="pulsarC" />
 
             <Button
-                android:text="+/-"
+                android:text="MC"
                 android:layout_width="0dp"
                 android:id="@+id/button22"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
                 android:textStyle="normal|bold|italic"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:onClick="pulsarMC" />
 
             <Button
-                android:text="%"
+                android:text="MR"
                 android:layout_width="0dp"
                 android:id="@+id/button21"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
                 android:textStyle="normal|bold|italic"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:onClick="pulsarMR" />
 
             <Button
                 android:text="/"
@@ -235,38 +240,48 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
+            <ImageButton
+                android:background="@android:color/darker_gray"
+                app:srcCompat="?android:attr/actionModeCloseDrawable"
+                android:id="@+id/bEliminar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textStyle="normal|bold|italic"
+                android:onClick="pulsarEliminar"
+                android:layout_weight="1" />
+
             <Button
                 android:text="0"
                 android:id="@+id/b0"
-                android:layout_weight="1"
-                android:layout_width="95dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/colorButtonNormal"
                 android:textStyle="normal|bold|italic"
                 android:textSize="20sp"
-                android:onClick="pulsarNumero" />
+                android:onClick="pulsarNumero"
+                android:layout_weight="1" />
 
             <Button
                 android:text="."
                 android:layout_width="0dp"
                 android:id="@+id/bComa"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
                 android:textStyle="normal|bold|italic"
                 android:textSize="20sp"
-                android:onClick="pulsarNumero (MainActivity)" />
+                android:onClick="pulsarComa"
+                android:layout_weight="1" />
 
             <Button
                 android:text="="
                 android:layout_width="0dp"
                 android:id="@+id/bResultado"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
                 android:textStyle="normal|bold|italic"
                 android:textSize="20sp"
-                android:onClick="pulsarIgual" />
+                android:onClick="pulsarIgual"
+                android:layout_weight="1" />
         </TableRow>
     </TableLayout>
 
