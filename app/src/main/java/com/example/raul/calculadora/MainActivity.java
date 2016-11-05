@@ -175,6 +175,26 @@ public class MainActivity extends AppCompatActivity {
         opp = false;
     }
 
+    public void seno(View v){
+        double seno = Math.sin(Double.parseDouble(tv.getText().toString()));
+        tv.setText(""+seno);
+    }
+
+    public void cos(View v){
+        double cos = Math.cos(Double.parseDouble(tv.getText().toString()));
+        tv.setText(""+cos);
+    }
+
+    public void tan(View v){
+        double tan =  Math.tan(Double.parseDouble(tv.getText().toString()));
+        tv.setText(""+tan);
+    }
+
+    public void raizCuasdrada(View v){
+        double raiz = Math.sqrt(Double.parseDouble(tv.getText().toString()));
+        tv.setText(""+raiz);
+    }
+
     public void onSaveInstanceState(Bundle savedInstanceState){
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putString("PANT", pantalla);

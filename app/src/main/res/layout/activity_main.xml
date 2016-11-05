@@ -86,7 +86,8 @@
                 app:srcCompat="@mipmap/raiz_cuadrada"
                 android:id="@+id/imageButton"
                 android:layout_weight="1"
-                android:background="@android:color/darker_gray" />
+                android:background="@android:color/darker_gray"
+                android:onClick="raizCuasdrada" />
 
         </TableRow>
 
@@ -104,7 +105,8 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:textStyle="normal|bold"
-                android:background="@android:color/darker_gray" />
+                android:background="@android:color/darker_gray"
+                android:onClick="seno" />
 
             <Button
                 android:text="Cos"
@@ -114,7 +116,8 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:textStyle="normal|bold"
-                android:background="@android:color/darker_gray" />
+                android:background="@android:color/darker_gray"
+                android:onClick="cos" />
 
             <Button
                 android:text="Tang"
@@ -124,7 +127,8 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:textStyle="normal|bold"
-                android:background="@android:color/darker_gray" />
+                android:background="@android:color/darker_gray"
+                android:onClick="tan" />
 
             <Button
                 android:text="/"
